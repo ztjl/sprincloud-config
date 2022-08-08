@@ -1,0 +1,31 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: zz
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/db_reggie?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: 123456
+      # 邮箱配置
+  mail:
+    host: smtp.qq.com  # 发送邮件的服务器地址
+    username: xlei1812023@163.com # 登录163邮箱的账号
+    password: XTZMIJKGMWDXDVRI  # 开启 IMAP/SMTP服务 获得的授权码,而不是163邮箱的登录密码
+    default-encoding: UTF-8
+
+  redis:
+    host: localhost # 本地IP 或是 虚拟机IP
+    port: 6379
+    #    password: root
+    database: 0  # 默认使用 0号db
+  cache:
+    redis:
+      time-to-live: 1800000  # 设置缓存数据的过期时间，30分钟
+
+
+
+upload:
+  filePath: D:\upload\
